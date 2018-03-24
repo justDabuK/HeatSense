@@ -8,16 +8,20 @@ def main():
     try:
         while True:
             print "full red"
-            colorWipe(strip, Color(200, 0, 0), wait_ms=500)
+            colorWipe(strip, Color(200, 0, 0))
+            time.sleep(1)
 
             print "full green"
-            colorWipe(strip, Color(0, 200, 0), wait_ms=500)
+            colorWipe(strip, Color(0, 200, 0))
+            time.sleep(1)
 
             print "full blue"
-            colorWipe(strip, Color(0, 0, 200), wait_ms=500)
+            colorWipe(strip, Color(0, 0, 200))
+            time.sleep(1)
 
             print "full white"
-            colorWipe(strip, Color(0, 0, 0, 200), wait_ms=500)
+            colorWipe(strip, Color(0, 0, 0, 200))
+            time.sleep(1)
 
     except KeyboardInterrupt:
         print "exiting"
