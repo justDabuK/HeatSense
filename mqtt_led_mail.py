@@ -4,6 +4,7 @@ from Adafruit_BME280 import *
 from strandtest import *
 from neopixel import *
 from send_email import sendemail
+from traffic_light import *
 
 send_flag = 0
 
@@ -17,12 +18,12 @@ def on_message(client, userdata, message):
     global send_flag
 
     if degrees < 28.0:
-        colorWipe(strip, Color(255, 0, 0))
+        green(strip)
         if send_flag == 0:
             send_flag = 1
             print "everything is ok"
     else:
-        colorWipe(strip, Color(0, 255, 0))
+        red(strip)
         if send_flag == 1:
             send_flag = 0
             """sendemail(
@@ -34,6 +35,7 @@ def on_message(client, userdata, message):
                 'TMSBausses'
             )"""
             print "HEAT!!!!!"
+
 
 if __name__ == "__main__":
     strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
