@@ -7,27 +7,27 @@ def main():
 
     try:
         while True:
-            for i in range(strip.numPixels()):
+            for i in range(3, strip.numPixels()):
                 print "LED #", i
                 print "-> red"
                 strip.setPixelColor(i, Color(200, 0, 0, 0))
                 strip.show()
-                time.sleep(1)
+                time.sleep(2)
 
                 print "-> green"
                 strip.setPixelColor(i, Color(0, 200, 0, 0))
                 strip.show()
-                time.sleep(1)
+                time.sleep(2)
 
                 print "-> blue"
                 strip.setPixelColor(i, Color(0, 0, 200, 0))
                 strip.show()
-                time.sleep(1)
+                time.sleep(2)
 
                 print "-> white"
                 strip.setPixelColor(i, Color(0, 0, 0, 200))
                 strip.show()
-                time.sleep(1)
+                time.sleep(2)
 
     except KeyboardInterrupt:
         print "exiting"
