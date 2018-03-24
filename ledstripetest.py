@@ -20,7 +20,7 @@ def main():
             time.sleep(1)
 
             print "full white"
-            colorWipe(strip, Color(0, 0, 0, 200, 0))
+            colorWipe(strip, Color(0, 0, 0, 200))
             time.sleep(1)
 
             print "everything"
