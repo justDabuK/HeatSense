@@ -8,19 +8,23 @@ def main():
     try:
         while True:
             print "full red"
-            colorWipe(strip, Color(200, 0, 0))
+            colorWipe(strip, Color(200, 0, 0, 0))
             time.sleep(1)
 
             print "full green"
-            colorWipe(strip, Color(0, 200, 0))
+            colorWipe(strip, Color(0, 200, 0, 0))
             time.sleep(1)
 
             print "full blue"
-            colorWipe(strip, Color(0, 0, 200))
+            colorWipe(strip, Color(0, 0, 200, 0))
             time.sleep(1)
 
             print "full white"
-            colorWipe(strip, Color(0, 0, 0, 200))
+            colorWipe(strip, Color(0, 0, 0, 200, 0))
+            time.sleep(1)
+
+            print "everything"
+            colorWipe(strip, Color(200, 200, 200, 200))
             time.sleep(1)
 
     except KeyboardInterrupt:
