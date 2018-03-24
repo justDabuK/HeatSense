@@ -3,6 +3,7 @@ from neopixel import *
 
 
 def green(strip):
+    colorWipe(strip, Color(0, 0, 0), 0)
     strip.setPixelColor(0, Color(200, 0, 0))
     strip.show()
 
@@ -17,6 +18,7 @@ def green(strip):
 
 
 def red(strip):
+    colorWipe(strip, Color(0, 0, 0), 0)
     strip.setPixelColor(0, Color(0, 200, 0))
     strip.show()
 
@@ -36,12 +38,12 @@ def main():
 
     try:
         while True:
-            print "green"
-            green(strip)
-            time.sleep(2)
-
             print "red"
             red(strip)
+            time.sleep(2)
+
+            print "green"
+            green(strip)
             time.sleep(2)
 
     except KeyboardInterrupt:
