@@ -1,14 +1,14 @@
 #include <PubSubClient.h>
-//#include <WiFi.h>
 #include <ESP8266WiFi.h>
 #include <Wire.h>
 #include <Adafruit_INA219.h>
 #include <EEPROM.h>
 
-const char* ssid = "Pixel_2875";
-const char* password = "452e462d49cd";
-const char* mqtt_server = "macman";
+const char* ssid = "calidi";
+const char* password = "TMSBausses";
+const char* mqtt_server = "192.168.3.254";
 
+WiFiClient espClient;
 PubSubClient client(espClient);
 
 const byte ledPin = 5; 

@@ -8,9 +8,9 @@
 #include <Adafruit_BMP280.h>
 
 // Connect to the WiFi
-const char* ssid = "Pixel_2875";
-const char* password = "452e462d49cd";
-const char* mqtt_server = "192.168.43.141";
+const char* ssid = "calidi";
+const char* password = "TMSBausses";
+const char* mqtt_server = "192.168.3.254";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
