@@ -43,7 +43,7 @@ if __name__ == "__main__":
     print "Initialized strip"
 
 
-    broker_address = "192.168.43.141"
+    broker_address = "127.0.0.1"
 
     print("creating new instance")
     client = mqtt.Client("P1")  # create new instance
@@ -53,6 +53,8 @@ if __name__ == "__main__":
     client.loop_start()  # start the loop
     print("Subscribing to topic", "collarTemp")
     client.subscribe("collarTemp")
+    
+    yellow(strip)
 
     try:
         while True:
